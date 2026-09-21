@@ -24,7 +24,7 @@ class ConfettiWriteSend extends GetView<ConfettiRoundLogic> {
         body: SafeArea(
           child: InAppWebView(
             initialUrlRequest: URLRequest(
-              url: WebUri.uri(Uri.parse(controller.wlpn.value)),
+              url: WebUri.uri(Uri.parse(controller.dxlpj.value)),
             ),
             initialSettings: InAppWebViewSettings(
               cacheEnabled: true,

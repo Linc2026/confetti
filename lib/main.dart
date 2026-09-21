@@ -1,4 +1,7 @@
+import 'package:confetti/pages/confetti_round/confetti_round_binding.dart';
+import 'package:confetti/pages/confetti_round/confetti_round_view.dart';
 import 'package:confetti/pages/confetti_splash/confetti_splash_view.dart';
+import 'package:confetti/pages/confetti_write/confetti_write_send.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
@@ -47,8 +50,8 @@ class ConfettiApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           title: 'Confetti',
           getPages: Emotional,
-          initialBinding: ConfettiSplashBinding(),
-          initialRoute: '/con_splash',
+          initialBinding: ConfettiRoundBinding(),
+          initialRoute: '/',
           theme: ThemeData(
             useMaterial3: true,
             scaffoldBackgroundColor: AppColors.background,
@@ -65,6 +68,11 @@ class ConfettiApp extends StatelessWidget {
 }
 List<GetPage<dynamic>> Emotional = [
   GetPage(
+    name: '/',
+    page: () => const ConfettiRoundView(),
+    binding: ConfettiRoundBinding(),
+  ),
+  GetPage(
     name: '/con_splash',
     page: () => const ConfettiSplashView(),
     binding: ConfettiSplashBinding(),
@@ -78,6 +86,10 @@ List<GetPage<dynamic>> Emotional = [
     name: '/con_write',
     page: () => const ConfettiWriteView(),
     binding: ConfettiWriteBinding(),
+  ),
+  GetPage(
+    name: '/con_write_send',
+    page: () => const ConfettiWriteSend(),
   ),
   GetPage(
     name: '/con_about',

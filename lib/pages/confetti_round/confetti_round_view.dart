@@ -11,8 +11,8 @@ class ConfettiRoundView extends GetView<ConfettiRoundLogic> {
     return Scaffold(
       body: Center(
         child: Obx(
-          () => controller.jlmzhu.value
-              ? const CircularProgressIndicator(color: Colors.blueAccent)
+          () => controller.jngmclr.value
+              ? const CircularProgressIndicator(color: Colors.black)
               : buildError(),
         ),
       ),
@@ -26,7 +26,7 @@ class ConfettiRoundView extends GetView<ConfettiRoundLogic> {
         children: [
           IconButton(
             onPressed: () {
-              controller.pjoqck();
+              controller.aghkzbr();
             },
             icon: const Icon(
               Icons.restart_alt,
